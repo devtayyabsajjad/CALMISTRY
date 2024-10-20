@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground: #000000; /* Black text */
+  --background: #ffffff; /* White background */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground: #ffffff; /* White text */
+    --background: #000000; /* Black background */
+  }
+}
+
+body {
+  color: var(--foreground);
+  font-family: 'Noto Sans KR', sans-serif;
+  background: var(--background); /* Use the white background */
+}
+
+h1, h2, h3 {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+a {
+  color: var(--foreground);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #000000; /* Black on hover */
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes grow {
+  from { transform: scale(1); }
+  to { transform: scale(1.2); }
+}
+
+@keyframes shrink {
+  from { transform: scale(1.2); }
+  to { transform: scale(1); }
+}
+
+.bg-blur {
+  backdrop-filter: blur(10px); /* Apply blur effect */
+}
+
+body {
+  background: #1a1a1a; /* Dark background for the entire page */
+}
+
